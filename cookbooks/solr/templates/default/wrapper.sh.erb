@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case $1 in
+  start)
+    mkdir -p /var/run/solr;
+    mkdir -p /var/log/solr;
+    cd <%= @cwd %>;
+    echo $$ > /var/run/solr/<%= @pidfilename %>.pid;
+    exec <%= @command %> &> /var/log/solr/<%= @pidfilename %>-$(whoami).out;
+    ;;
+   stop)
+    <%= @command %> --stop;
+    ;;
+   *)
+    echo "usage: <%= @pidfilename %> {start|stop}" ;;
+esac
+exit 0

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<allocations>
+  <pool name="core">
+    <minMaps>5</minMaps>
+    <minReduces>5</minReduces>
+    <maxMaps>10</maxMaps>
+    <maxReduces>10</maxReduces>
+    <minSharePreemptionTimeout>300</minSharePreemptionTimeout>
+  </pool>
+  <pool name="queries">
+    <minMaps>2</minMaps>
+    <minReduces>2</minReduces>
+    <maxMaps>4</maxMaps>
+    <maxReduces>4</maxReduces>
+    <minSharePreemptionTimeout>300</minSharePreemptionTimeout>
+  </pool>
+  <pool name="itineraries">
+    <minMaps>2</minMaps>
+    <minReduces>2</minReduces>
+    <maxMaps>4</maxMaps>
+    <maxReduces>4</maxReduces>
+    <minSharePreemptionTimeout>300</minSharePreemptionTimeout>
+  </pool>
+  <pool name="dummy">
+    <minMaps>1</minMaps>
+    <minReduces>1</minReduces>
+    <maxMaps>1</maxMaps>
+    <maxReduces>1</maxReduces>
+    <minSharePreemptionTimeout>300</minSharePreemptionTimeout>
+  </pool>
+  <userMaxJobsDefault>3</userMaxJobsDefault>
+  <fairSharePreemptionTimeout>600</fairSharePreemptionTimeout>
+</allocations>
